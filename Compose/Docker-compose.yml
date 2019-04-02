@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx
+    ports: 
+      - "80:80"
+  mysql:
+    image: mysql
+    ports: 
+      - "3306:3306"
+    environment: 
+    - MYSQL_ROOT_PASSWORD=my-pw
+    volumes: 
+    - mysql:/var/lib/mysql
+  alpine:
+    image: alpine
+    command: tail -F anything
+volumes: 
+  mysql:

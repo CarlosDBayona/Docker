@@ -1,0 +1,2 @@
+# Traer del Docker hub la base de nuestra imagen
+FROM nginx:alpine
